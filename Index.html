@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Electra Frequency — Real-Time Self Reinvention</title>
+<meta name="description" content="Electra Frequency — a lotus portal of audio, ceremony and luminous practice for radical personal evolution." />
+<style>
+  :root{
+    --bg:#0f0b10; /* deep midnight */
+    --accent:#c9a7ff; /* A-ish lavender */
+    --accent-2:#ffb7c5; /* C-ish soft rose */
+    --muted:#bdb5c9;
+    --card:#19141a;
+    --maxw:1000px;
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+  }
+  html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#0b0710);color:#f6f4f9}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:48px 20px}
+  header{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}
+  .brand{font-weight:700;letter-spacing:1px}
+  nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:14px}
+  .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;margin-bottom:40px}
+  @media(max-width:880px){.hero{grid-template-columns:1fr;}.hero-right{order:-1}}
+  .hero h1{font-size:36px;margin:0 0 10px}
+  .hero p{margin:0 0 18px;color:var(--muted)}
+  .btn{display:inline-block;padding:10px 16px;border-radius:8px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#100915;font-weight:700;text-decoration:none;margin-right:10px}
+  .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:20px;border-radius:14px}
+  .offers{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:30px 0}
+  @media(max-width:880px){.offers{grid-template-columns:1fr}}
+  footer{margin-top:40px;color:var(--muted);font-size:13px;padding-top:22px;border-top:1px solid rgba(255,255,255,0.03)}
+  /* falling petals */
+  #petal-wrap{position:relative;height:360px;overflow:hidden;border-radius:14px}
+  .petal{position:absolute;top:-40px;width:28px;height:28px;background:radial-gradient(circle at 40% 30%, #fff9, #fffb);border-radius:50%;opacity:0.85;transform:rotate(15deg)}
+  /* simple animation via JS for variation */
+  .audio-portal{display:flex;flex-direction:column;gap:10px}
+  .small{font-size:13px;color:var(--muted)}
+  .testimonials{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+  @media(max-width:880px){.testimonials{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">Electra Frequency</div>
+      <nav><a href="#about">About</a><a href="#offerings">Offerings</a><a href="#journey">Journey</a><a href="#contact">Contact</a></nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>Real-Time Self-Reinvention</h1>
+        <p>A lotus portal of audio, ceremony and luminous practice for radical personal evolution. Enter the frequency — shed, reframe, become.</p>
+        <div>
+          <a class="btn" id="enter-portal">Enter the Lotus Portal</a>
+          <a href="#journey" class="btn" style="background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)">Join the Group Journey</a>
+        </div>
+        <div style="margin-top:20px;color:var(--muted);font-size:14px">
+          <strong>Lead:</strong> Layla Electra — mystic bodywork, somatic ritual, creative mentorship.
+        </div>
+      </div>
+
+      <aside class="hero-right card">
+        <div id="petal-wrap" aria-hidden="true"></div>
+
+        <div style="margin-top:12px" class="audio-portal">
+          <div class="small">Lotus Portal Audio</div>
+          <audio id="portal-audio" preload="none">
+            <source src="assets/portal-loop.mp3" type="audio/mpeg">
+            Your browser does not support audio.
+          </audio>
+          <button id="play-btn" class="btn" style="padding:8px 12px;font-size:14px">Play Portal</button>
+          <div class="small">Click to play. Use headphones for full effect.</div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="about">
+      <div class="card">
+        <h2>About Electra Frequency</h2>
+        <p>Electra Frequency channels mystic bodywork, personal evolution, and sensual human artistry. Led by Layla Electra, we blend ritual, somatic technique, and creative practice to help seekers undergo tangible transformation — in real time.</p>
+      </div>
+    </section>
+
+    <section id="offerings">
+      <h3 style="margin-top:20px">Offerings</h3>
+      <div class="offers">
+        <div class="card">
+          <h4>Mystic Bodywork</h4>
+          <p>Somatic sessions to release held patterning and open your nervous system to pleasure and safety.</p>
+          <a class="small" href="#contact">Book a Session →</a>
+        </div>
+        <div class="card">
+          <h4>Group Transformation Journey</h4>
+          <p>Six-week cohort experiences blending ritual, coaching, and creative practice. Limited seats.</p>
+          <a class="small" href="#journey">Join Next Cohort →</a>
+        </div>
+        <div class="card">
+          <h4>Sensual Human Artistry</h4>
+          <p>Creative mentorship & performance coaching for embodied expression.</p>
+          <a class="small" href="#contact">Apply →</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="journey">
+      <div class="card">
+        <h3>Group Journey</h3>
+        <p>Six weeks of weekly ceremonies, somatic practice, and creative prompts — designed to surface, reforge, and re-integrate your next self.</p>
+        <a class="btn" href="#contact">Request Info</a>
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <h3 style="margin-top:20px">Testimonials</h3>
+      <div class="testimonials">
+        <div class="card">“An alchemical container — I've never felt this seen.” — A.</div>
+        <div class="card">“Practical ritual that actually changed my nervous system.” — M.</div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="card" style="margin-top:20px">
+        <h3>Contact</h3>
+        <p>Booking & press: <a href="mailto:hello@electrafrequency.com" style="color:var(--accent)">hello@electrafrequency.com</a></p>
+        <p class="small">Sponsor deck & media kit available on request.</p>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> Electra Frequency — Layla Electra · <span class="small">Lotus Portal concept</span></div>
+    </footer>
+  </div>
+
+<script>
+  // year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // simple petal generator
+  const wrap = document.getElementById('petal-wrap');
+  function spawnPetal(){
+    const el = document.createElement('div');
+    el.className = 'petal';
+    el.style.left = Math.random()*100 + '%';
+    el.style.width = (18 + Math.random()*28) + 'px';
+    el.style.height = el.style.width;
+    el.style.opacity = 0.6 + Math.random()*0.4;
+    wrap.appendChild(el);
+    const duration = 6000 + Math.random()*8000;
+    const endX = (Math.random()*80 - 40);
+    el.animate([
+      { transform: 'translateY(-40px) rotate('+ (Math.random()*40-20) +'deg)', opacity:el.style.opacity },
+      { transform: 'translateY(420px) translateX('+endX+'px) rotate('+ (Math.random()*200-100) +'deg)', opacity:0.05 }
+    ],{duration:duration, easing:'linear'});
+    setTimeout(()=> el.remove(), duration);
+  }
+  // spawn petals slowly
+  setInterval(spawnPetal, 600);
+
+  // audio play button: click-to-play for compatibility
+  const audio = document.getElementById('portal-audio');
+  const btn = document.getElementById('play-btn');
+  btn.addEventListener('click', () => {
+    if(audio.paused){
+      audio.play().catch(()=>{ alert('Playback failed — user gesture required.')});
+      btn.textContent = 'Pause Portal';
+    } else {
+      audio.pause();
+      btn.textContent = 'Play Portal';
+    }
+  });
+  // pre-load small samples: optional
+</script>
+</body>
+</html>
